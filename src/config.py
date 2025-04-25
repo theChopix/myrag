@@ -7,7 +7,13 @@ load_dotenv()
 class Config(BaseModel):
     OPENAI_API_KEY : str = ""
 
+    EMBEDDING_MODEL : str = ""
+    CHAT_MODEL : str = ""
+
+    MAX_TOKENS : int
+
     DB_STRING : str = ""
+    DB_NAME : str = ""
 
     @classmethod
     def load_from_env(cls):
@@ -18,4 +24,4 @@ class Config(BaseModel):
         }
         return cls(**env_values)
     
-config = Config.load_from_env
+config = Config.load_from_env()

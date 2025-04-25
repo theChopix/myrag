@@ -9,7 +9,9 @@ version = "1.0"
 dependencies = [
     "pip-tools",
     "python-dotenv",
-    "pydantic"
+    "pydantic",
+    "langchain",
+    "pymongo[srv]==3.12"
 ]
 
 [tools.setuptools.packages.find]
